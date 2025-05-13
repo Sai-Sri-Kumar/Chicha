@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sample.css" />
+    <title>Admin Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="login__content">
+                <h2 class="login__robot-text">Admin Sign Up</h2>
+                <img class="login__img" src="images/robo.png" alt="Login image" />
+                <form class="login__form" id="adminSignupForm">
+                    <div id="adminSignupErrorMessage" class="login__error-message" style="display: none;"></div>
+                    <div>
+                        <h1 class="login__title">
+                            <span>Admin</span> Sign Up
+                        </h1>
+                    </div>
+                    <div>
+                        <div class="login__inputs">
+                            <div>
+                                <label for="username" class="login__label">Username</label>
+                                <input class="login__input" type="text" id="username" name="username" placeholder="Enter admin username" required />
+                            </div>
+                            <div>
+                                <label for="email" class="login__label">Email</label>
+                                <input class="login__input" type="email" id="email" name="email" placeholder="Enter admin email" required />
+                            </div>
+                            <div>
+                                <label for="password" class="login__label">Password</label>
+                                <div class="login__box">
+                                    <input class="login__input" type="password" id="password" name="password" placeholder="Enter admin password" required />
+                                    <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="adminCode" class="login__label">Admin Code</label>
+                                <input class="login__input" type="text" id="adminCode" name="adminCode" placeholder="Enter admin code" required />
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="login__buttons">
+                            <button class="login__button" type="submit">Admin Sign Up</button>
+                        </div>
+                        <span class="login__back">Already an admin? <a href="/admin-login" class="login__back-link">Admin Login</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/admin-signup.js"></script>
+</body>
+</html>

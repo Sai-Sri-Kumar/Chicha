@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sample.css" />
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="login__content">
+                <h2 class="login__robot-text">Hey, I'm Chicha</h2>
+                <img class="login__img" src="images/robo.png" alt="Login image" />
+                <form class="login__form" id="signupForm">
+                    <div id="signupErrorMessage" class="login__error-message" style="display: none;"></div>
+                    <div>
+                        <h1 class="login__title">
+                            <span>Welcome!</span>
+                            Sign Up
+                        </h1>
+                    </div>
+                    <div>
+                        <div class="login__inputs">
+                            <div>
+                                <label for="username" class="login__label">Username</label>
+                                <input class="login__input" type="text" id="username" name="username" placeholder="Enter Username" required />
+                            </div>
+                            <div>
+                                <label for="email" class="login__label">Email</label>
+                                <input class="login__input" type="email" id="email" name="email" placeholder="Enter email address" required />
+                            </div>
+                            <div>
+                                <label for="password" class="login__label">Password</label>
+                                <div class="login__box">
+                                    <input class="login__input" type="password" id="password" name="password" placeholder="Enter password" required />
+                                    <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="login__buttons">
+                            <button class="login__button" type="submit">Sign Up</button>
+                        </div>
+                        <p class="login__signup">Already have an account? <a href="/login" class="login__signup-link">Log In</a></p>
+                        <span class="login__admin">Are you an admin? <a href="/admin-signup" class="login__admin-link">Admin Sign Up</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

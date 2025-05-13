@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact Us - Chicha</title>
+</head>
+<body>
+    <header>
+        <div class="bot-name">Chicha</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/team" class="nav-link">Team</a></li>
+                <li><a href="/about" class="nav-link">About Us</a></li>
+                <li><a href="/contact" class="nav-link active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact__content">
+        <div class="contact__left">
+            <h1 class="contact__title">Contact Us</h1>
+            <p class="contact__description">Have questions or feedback? We'd love to hear from you! Fill out the form, and we'll get back to you as soon as possible.</p>
+        </div>
+        <div class="contact__right">
+            <form class="contact__form" id="contactForm" method="POST">
+                <div class="contact__inputs">
+                    <div class="contact__input-group">
+                        <label for="firstname" class="contact__label">First Name</label>
+                        <input type="text" id="firstname" class="contact__input" required>
+                    </div>
+                    <div class="contact__input-group">
+                        <label for="lastname" class="contact__label">Last Name</label>
+                        <input type="text" id="lastname" class="contact__input" required>
+                    </div>
+                    <div class="contact__input-group">
+                        <label for="email" class="contact__label">Email</label>
+                        <input type="email" id="email" class="contact__input" required>
+                    </div>
+                    <div class="contact__input-group">
+                        <label for="message" class="contact__label">What can we help you with?</label>
+                        <textarea id="message" class="contact__input contact__textarea" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="contact__button">Submit</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/contact.js"></script>
+
+</body>
+</html>

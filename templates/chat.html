@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat with Chicha AI">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Chat with Chicha</title>
+    <script src="js/chat.js" defer></script>
+    <style>
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #1a1a1a;
+            border-right: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s ease;
+            color: #ffffff;
+        }
+        .sidebar.collapsed {
+            width: 60px;
+        }
+        .icon-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #333;
+        }
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .icon-btn:hover {
+            background-color: #333;
+            border-radius: 5px;
+        }
+        .icon-btn img {
+            filter: invert(1);
+        }
+        .chat-history {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .session-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #2a2a2a;
+            border: 1px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.2s ease;
+            color: #ffffff;
+        }
+        .session-button:hover {
+            background-color: #3a3a3a;
+        }
+        .main-content {
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+        .main-content.expanded {
+            margin-left: 60px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+            .sidebar:not(.collapsed) {
+                width: 250px;
+            }
+            .main-content {
+                margin-left: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="icon-buttons">
+            <button class="icon-btn" id="toggleSidebar">
+                <img src="images/toggle-icon.png" alt="Toggle" style="width: 24px; height: 24px;">
+            </button>
+            <button class="icon-btn" id="newChatButton">
+                <img src="images/plus-icon.png" alt="New Chat" style="width: 24px; height: 24px;">
+            </button>
+        </div>
+        <div class="chat-history">
+            <div id="sessionList">
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <nav class="navbar">
+            <a href="/"><h1 class="bot-name">Chicha</h1></a>
+            <h2 id="sessionName">New Chat</h2>
+            <div class="auth-buttons">
+                <span id="userDisplay" class="user-display" style="display: none;"></span>
+                <a href="/login" id="loginButton"><button class="login-btn">Log in</button></a>
+                <a href="/signup" id="signupButton"><button class="signup-btn">Sign up</button></a>
+                <button id="logoutButton" onclick="logout()" style="display: none;">Logout</button>
+            </div>
+        </nav>
+        <div class="chat-container">
+            <div id="chatMessages" class="chat__messages" aria-live="polite"></div>
+        </div>
+        <div class="input-container">
+            <div class="chat__input">
+                <textarea id="userInput" rows="1" placeholder="Chat With Chicha" aria-label="Enter your message"></textarea>
+                <button id="sendButton" aria-label="Send message">
+                    <img src="images/arrow.png" alt="Send" class="send-icon">
+                </button>
+                <button id="speechButton" aria-label="Start voice input">
+                    <img src="images/mic.png" alt="Microphone" class="speech-icon">
+                </button>
+            </div>
+            <div class="chat__input-text">Chicha can make mistakes. It may not always be accurate.</div>
+        </div>
+    </div>
+</body>
+</html>

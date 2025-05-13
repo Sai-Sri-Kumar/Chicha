@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chicha is an advanced AI chat assistant designed to boost productivity and spark creativity. Get answers, find inspiration, and chat with our intelligent bot.">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sample.css" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="login__content">
+                <h2 class="login__robot-text">Hey, I'm Chicha</h2>
+                <img class="login__img" src="images/robo.png" alt="Login image" />
+                <form class="login__form" id="loginForm">
+                    <div id="loginErrorMessage" class="login__error-message" style="display: none;"></div>
+                    <div>
+                        <h1 class="login__title">
+                            <span>Welcome</span> Back!
+                        </h1>
+                        <p class="login__description">
+                            Welcome! Please login to continue.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="login__inputs">
+                            <div>
+                                <label for="email" class="login__label">Email</label>
+                                <input class="login__input" type="email" id="email" name="email" placeholder="Enter email address" required />
+                            </div>
+                            <div>
+                                <label for="password" class="login__label">Password</label>
+                                <div class="login__box">
+                                    <input class="login__input" type="password" id="password" name="password" placeholder="Enter password" required />
+                                    <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login__check">
+                            <label class="login__check-label" for="check">
+                                <input class="login__check-input" type="checkbox" id="check" />
+                                <i class="ri-check-line login__check-icon"></i>
+                                Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="login__buttons">
+                            <button class="login__button" type="submit">Log In</button>
+                        </div>
+                        <a class="login__forgot" href="/forgot-password">Forgot Password?</a><br>
+                        <span class="login__signup">Create an account? <a href="/signup" class="login__signup-link">Sign Up</a></span><br>
+                        <span class="login__admin">Are you an admin? <a href="/admin-login" class="login__admin-link">Admin Login</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
