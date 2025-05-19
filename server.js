@@ -15,11 +15,11 @@ const WebSocket = require('ws');
 const { exec, spawn } = require('child_process');
 const sessionSchema = require('./models/Session');
 
-const app = require('../server');
+const app = express();
 const server = http.createServer(app);
 const serverless = require('serverless-http');
 
-module.exports.handler = serverless(app);
+module.exports = app;
 
 if (!process.env.JWT_SECRET) {
   console.error('FATAL ERROR: JWT_SECRET is not defined.');
